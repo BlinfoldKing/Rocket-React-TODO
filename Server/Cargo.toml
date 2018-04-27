@@ -1,0 +1,12 @@
+[package]
+name = "Rocket React api"
+version = "1.0.0"
+authors = ["Blinfoldking"]
+
+[dependencies]
+rocket = "0.3.6"
+rocket_codegen = "0.3.6"
+
+[[bin]]
+name = "server"
+path = "server.rs"
