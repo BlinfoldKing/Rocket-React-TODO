@@ -1,17 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import App from "./src/App"
 
-class HelloMessage extends React.Component {
-    render() {
-        return <div>
-           <div className="container">
-                <h1>Hello {this.props.name}</h1>
-            </div>
-        </div>
-    }
-}
 
-let App = document.getElementById("app");
+let app = document.getElementById("app");
 
-ReactDOM.render(<HelloMessage name="World" />, App);
-console.log("hello world")
+ReactDOM.render(<App name="World" />, app);
