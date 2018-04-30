@@ -33,7 +33,12 @@ export default class App extends React.Component {
     render() {
         return (
 
-            <div className='has-background-grey-lighter'>
+            <div style={{
+                display: 'flex',
+                flexFlow: 'column',
+                minHeight: '100vh',
+                overflow: 'auto'
+            }}>
                 <Header/>
                 <PostCont items={this.dummmy}/>
             </div>

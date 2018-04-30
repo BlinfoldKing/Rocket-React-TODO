@@ -10,11 +10,17 @@ export default class PostCont extends React.Component {
     render () {
         return (
             <div 
-                className='has-background-white-ter'
                 style={{
                     width: '60%',
-                    margin: "0 auto 0 auto",
-                    padding: '10px'
+                    margin: "20px auto 20px auto",
+                    padding: '10px',
+                    backgroundColor: '#ddd',
+                    border: 'solid #222 1px',
+                    borderRadius: 10,
+                    display: 'flex',
+                    height: '100%',
+                    flexDirection: 'column',
+                    //justifyContent: 'space-between'
             }}>
 
                 <div style={{
@@ -30,8 +36,8 @@ export default class PostCont extends React.Component {
                 
                 {this.props.items.map(e => 
                     <Post 
-                        title='world' 
-                        body='world'
+                        title={e.title} 
+                        body={e.body}
                     />
                 )}
             </div>
