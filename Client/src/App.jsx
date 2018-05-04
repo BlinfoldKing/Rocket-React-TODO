@@ -50,9 +50,7 @@ export default class App extends React.Component {
                         <Route exact path='/' render={(props) => <PostCont {...props} items={this.dummmy}/>}/>
                         <Route path='/edit' render={(props) => <Editor/>}/>
                     </Switch>
-                </BrowserRouter>
-                
-                {/* < items={this.dummmy}/> */}
+                </BrowserRouter>                
             </div>
         
         )

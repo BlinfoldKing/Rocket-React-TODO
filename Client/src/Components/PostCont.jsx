@@ -15,7 +15,7 @@ export default class PostCont extends React.Component {
                     margin: "20px auto 20px auto",
                     padding: '10px',
                     backgroundColor: '#ddd',
-                    border: 'solid #222 1px',
+                    border: 'solid #999 1px',
                     borderRadius: 10,
                     display: 'flex',
                     height: '100%',
@@ -27,7 +27,7 @@ export default class PostCont extends React.Component {
                         width:'90%',
                         margin: "10px auto 10px auto"
                 }}>
-                    <a href="http://"
+                    <a href="/edit"
                     className="button is-primary"
                     >
                         [+] Create New Entry 
@@ -37,6 +37,7 @@ export default class PostCont extends React.Component {
                 {this.props.items.map((e, i) => 
                     <Post
                         key={i} 
+                        id={i}
                         title={e.title} 
                         body={e.body}
                     />
