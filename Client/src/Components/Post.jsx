@@ -19,7 +19,7 @@ export default class Post extends React.Component {
                 <div className="card-content">
                     <div className="content">{this.props.body}</div>
                 </div>
-                <footer class="card-footer">
+                <footer className="card-footer">
                     <a href="#" className="card-footer-item">Edit</a>
                     <a href="#" className="card-footer-item 
                     has-background-danger

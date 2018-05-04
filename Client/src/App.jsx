@@ -1,7 +1,11 @@
 import React from 'react';
 import Header from './Components/Header'
 import PostCont from './Components/PostCont'
+import Editor from './Components/Editor'
+import {BrowserRouter, Switch, Route} from 'react-router-dom'
 
+
+const Hello = () => <h1>Hello World</h1>
 export default class App extends React.Component {
     
     constructor (props) {
@@ -29,6 +33,7 @@ export default class App extends React.Component {
             }
         ]
     }
+
     
     render() {
         return (
@@ -40,7 +45,14 @@ export default class App extends React.Component {
                 overflow: 'auto'
             }}>
                 <Header/>
-                <PostCont items={this.dummmy}/>
+                <BrowserRouter>
+                    <Switch>
+                        <Route exact path='/' render={(props) => <PostCont {...props} items={this.dummmy}/>}/>
+                        <Route path='/edit' render={(props) => <Editor/>}/>
+                    </Switch>
+                </BrowserRouter>
+                
+                {/* < items={this.dummmy}/> */}
             </div>
         
         )
