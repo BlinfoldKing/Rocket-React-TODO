@@ -2,6 +2,13 @@ import React from 'react'
 
 export default class Editor extends React.Component {
 
+    constructor (props) {
+        super(props)
+        this.state = {
+            title: 'aaa',
+            body: 'aaa'
+        }
+    }
 
     render () {
         return (
@@ -33,9 +40,11 @@ export default class Editor extends React.Component {
                     <form>
                         <input className='input' type="text"  style={{margin: '20px 0 20px 0'}} name="Title" placeholder='Title'/> 
                         <textarea className='textarea' placeholder='Description'></textarea><br/>
-                        <input className='button is-primary' type="submit" value="Save" />
+                        {console.log(this.props.makePost)}
                     </form>
 
+                    <button className='button is-primary' type="submit" value="Save" onClick={() => this.props.makePost(this.state.title, this.state.body)}>Save </button>
+                    
 
                 </div>
                 

@@ -33,13 +33,14 @@ export default class PostCont extends React.Component {
                         [+] Create New Entry 
                     </a>
                 </div>
-                {console.log(this.props)}
+                {/* {console.log(this.props)} */}
                 {this.props.items.map((e, i) => 
                     <Post
                         key={i} 
                         id={i}
                         title={e.title} 
                         body={e.body}
+                        onRemove={(id) => this.props.onRemove(id)}
                     />
                 )}
             </div>
